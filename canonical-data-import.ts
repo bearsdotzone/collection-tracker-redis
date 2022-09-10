@@ -15,7 +15,7 @@ async function main() {
     // TODO: Catch errors
     const bulk_data_uri = bulk_data['data'][3]['download_uri']
 
-    var batchSize = 1000
+    const batchSize = 1000
 
     const all_cards_request = await fetch(bulk_data_uri)
     const all_cards_stream = chain.chain([all_cards_request.body.pipe(streamarray.withParser()), new Batch({ batchSize: batchSize })])
