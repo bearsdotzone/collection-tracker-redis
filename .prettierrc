@@ -1,0 +1,10 @@
+{
+	"useTabs": true,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"printWidth": 80,
+	"bracketSameLine": true,
+	"pluginSearchDirs": ["."],
+	"singleAttributePerLine": true,
+	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
+}
