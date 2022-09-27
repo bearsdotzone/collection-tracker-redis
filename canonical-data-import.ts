@@ -37,8 +37,9 @@ async function main() {
 		});
 		current_key += batchSize;
 	});
-	all_cards_stream.on('end', () => {
+	all_cards_stream.on('end', async () => {
 		console.log('finished redis pipeline');
+		await client.quit();
 	});
-	await client.quit();
+
 }
